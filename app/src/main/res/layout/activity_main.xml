@@ -68,10 +68,11 @@
             app:layout_constraintTop_toBottomOf="@id/output_ll" />
 
         <Button
-            android:id="@+id/percent_btn"
+            android:id="@+id/convert_btn"
             style="@style/WidgetBasic.CalcButton"
-            android:onClick="@{() -> viewmodel.percentPressed()}"
-            android:text=""
+            android:onClick="@{() -> viewmodel.convertPressed()}"
+            android:text="@{viewmodel.convert}"
+            android:textSize="@dimen/convert_unit_size"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_3"

@@ -7,9 +7,11 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
     private val _output = MutableLiveData("")
+    private val _convert = MutableLiveData("DEC")
     private val _outputResult = MutableLiveData("0")
 
     val output: LiveData<String> = _output
+    val convert: LiveData<String> = _convert
     val outputResult: LiveData<String> = _outputResult
 
 
@@ -80,9 +82,37 @@ class MainViewModel : ViewModel() {
         _output.value = ""
     }
 
-    fun percentPressed() {
-
+    fun convertPressed() {
+        val value = _convert.value
+        when {
+            value.equals("DEC") -> {
+                _convert.value = "HEX"
+                val result = _outputResult.value?.toIntOrNull() ?: 0
+                _outputResult.value = Integer.toHexString(result)
+            }
+            value.equals("HEX") -> {
+                _convert.value = "BIN"
+                val valString = outputResult.value.toString()
+                val i = Integer.parseInt(valString, 16)
+                _outputResult.value = Integer.toBinaryString(i)
+            }
+            value.equals("BIN") -> {
+                _convert.value = "DEC"
+                val result = toDecimal(_outputResult.value ?: "")
+                _outputResult.value = result.toString()
+            }
+        }
     }
+
+    private fun toDecimal(binaryNumber: String): Int {
+        var sum = 0
+        binaryNumber.reversed().forEachIndexed { k, v ->
+            sum += v.toString().toInt() * pow(2, k)
+        }
+        return sum
+    }
+
+    private fun pow(base: Int, exponent: Int) = Math.pow(base.toDouble(), exponent.toDouble()).toInt()
 
     fun divisionPressed() {
         if (operatorPresent()) return
