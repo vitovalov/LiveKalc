@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">LiveKalc</string>
+    <string name="calc_btn_ac">AC</string>
+    <string name="calc_btn_div">/</string>
+    <string name="calc_btn_multiply">x</string>
+    <string name="calc_btn_subs">-</string>
+    <string name="calc_btn_add">+</string>
+    <string name="calc_btn_0">0</string>
+    <string name="calc_btn_4">4</string>
+    <string name="calc_btn_5">5</string>
+    <string name="calc_btn_6">6</string>
+    <string name="calc_btn_7">7</string>
+    <string name="calc_btn_8">8</string>
+    <string name="calc_btn_9">9</string>
+    <string name="calc_btn_1">1</string>
+    <string name="calc_btn_2">2</string>
+    <string name="calc_btn_3">3</string>
 </resources>

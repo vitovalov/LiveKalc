@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="com.vitovalov.livekalc.MainViewModel" />
+            type="com.vitovalov.livekalc.CalculatorViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +40,7 @@
             tools:text="0" />
 
         <TextView
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/result_margin_left"
             android:id="@+id/output_result_tv"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:text="@{viewmodel.outputResult}"
             android:textSize="@dimen/output_text_size"
             tools:ignore="SpUsage"
-            tools:text="022" />
+            tools:text="0" />
 
         </LinearLayout>
 
@@ -61,7 +61,7 @@
             android:id="@+id/ac_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.acPressed()}"
-            android:text="AC"
+            android:text="@string/calc_btn_ac"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
@@ -82,7 +82,7 @@
             android:id="@+id/division_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.divisionPressed()}"
-            android:text="/"
+            android:text="@string/calc_btn_div"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
             app:layout_constraintRight_toRightOf="parent"
@@ -92,7 +92,7 @@
             android:id="@+id/multiply_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.multiplyPressed()}"
-            android:text="x"
+            android:text="@string/calc_btn_multiply"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
             app:layout_constraintRight_toRightOf="parent"
@@ -102,7 +102,7 @@
             android:id="@+id/substract_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.substractPressed()}"
-            android:text="-"
+            android:text="@string/calc_btn_subs"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
             app:layout_constraintRight_toRightOf="parent"
@@ -112,7 +112,7 @@
             android:id="@+id/add_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.addPressed()}"
-            android:text="+"
+            android:text="@string/calc_btn_add"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_4"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
             app:layout_constraintRight_toRightOf="parent"
@@ -122,7 +122,7 @@
             android:id="@+id/zero_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.zeroPressed()}"
-            android:text="0"
+            android:text="@string/calc_btn_0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
@@ -152,7 +152,7 @@
             android:id="@+id/four_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.fourPressed()}"
-            android:text="4"
+            android:text="@string/calc_btn_4"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
@@ -162,7 +162,7 @@
             android:id="@+id/five_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.fivePressed()}"
-            android:text="5"
+            android:text="@string/calc_btn_5"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
@@ -172,7 +172,7 @@
             android:id="@+id/six_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.sixPressed()}"
-            android:text="6"
+            android:text="@string/calc_btn_6"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
@@ -182,7 +182,7 @@
             android:id="@+id/seven_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.sevenPressed()}"
-            android:text="7"
+            android:text="@string/calc_btn_7"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
@@ -192,7 +192,7 @@
             android:id="@+id/eight_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.eightPressed()}"
-            android:text="8"
+            android:text="@string/calc_btn_8"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
@@ -202,7 +202,7 @@
             android:id="@+id/nine_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.ninePressed()}"
-            android:text="9"
+            android:text="@string/calc_btn_9"
             app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
@@ -212,7 +212,7 @@
             android:id="@+id/one_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.onePressed()}"
-            android:text="1"
+            android:text="@string/calc_btn_1"
             app:layout_constraintBottom_toTopOf="@id/zero_btn"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
@@ -222,7 +222,7 @@
             android:id="@+id/two_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.twoPressed()}"
-            android:text="2"
+            android:text="@string/calc_btn_2"
             app:layout_constraintBottom_toTopOf="@id/zero_btn"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
@@ -232,7 +232,7 @@
             android:id="@+id/three_btn"
             style="@style/WidgetBasic.CalcButton"
             android:onClick="@{() -> viewmodel.threePressed()}"
-            android:text="3"
+            android:text="@string/calc_btn_3"
             app:layout_constraintBottom_toTopOf="@id/zero_btn"
             app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
             app:layout_constraintRight_toLeftOf="@id/gdl_v_3"

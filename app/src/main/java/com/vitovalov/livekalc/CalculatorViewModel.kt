@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
-class MainViewModel : ViewModel() {
+class CalculatorViewModel : ViewModel() {
     private val _output = MutableLiveData("")
     private val _convert = MutableLiveData("DEC")
     private val _outputResult = MutableLiveData("0")
