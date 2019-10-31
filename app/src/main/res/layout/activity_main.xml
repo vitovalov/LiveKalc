@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/output_tv"
+        style="@style/WidgetBasic"
+        android:background="#ccc"
+        android:gravity="right|center"
+        android:padding="@dimen/output_padding"
+        android:text="0"
+        android:textSize="@dimen/output_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/gdl_h_0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/ac_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
+        app:layout_constraintTop_toBottomOf="@id/output_tv" />
+
+    <Button
+        android:id="@+id/percent_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
+        app:layout_constraintTop_toBottomOf="@id/output_tv" />
+
+    <Button
+        android:id="@+id/division_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_1"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_tv" />
+
+    <Button
+        android:id="@+id/multiply_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="x"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_1" />
+
+    <Button
+        android:id="@+id/substract_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_2" />
+
+    <Button
+        android:id="@+id/add_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_4"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_3" />
+
+    <Button
+        android:id="@+id/zero_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_4" />
+
+    <Button
+        android:id="@+id/equal_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_4" />
+
+    <Button
+        android:id="@+id/comma_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_4" />
+
+    <Button
+        android:id="@+id/four_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_2" />
+
+    <Button
+        android:id="@+id/five_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_2" />
+
+    <Button
+        android:id="@+id/six_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_3"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_2" />
+
+    <Button
+        android:id="@+id/seven_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
+        app:layout_constraintTop_toBottomOf="@id/ac_btn" />
+
+    <Button
+        android:id="@+id/eight_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
+        app:layout_constraintTop_toBottomOf="@id/ac_btn" />
+
+    <Button
+        android:id="@+id/nine_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@id/gdl_h_2"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
+        app:layout_constraintTop_toBottomOf="@id/ac_btn" />
+
+    <Button
+        android:id="@+id/one_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/zero_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_1"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_3" />
+
+    <Button
+        android:id="@+id/two_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@id/zero_btn"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_1"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_2"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_3" />
+
+    <Button
+        android:id="@+id/three_btn"
+        style="@style/WidgetBasic.CalcButton"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@id/zero_btn"
+        app:layout_constraintLeft_toRightOf="@id/gdl_v_2"
+        app:layout_constraintRight_toLeftOf="@id/gdl_v_3"
+        app:layout_constraintTop_toBottomOf="@id/gdl_h_3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_v_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_v_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_v_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_h_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_h_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_h_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_h_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_h_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
