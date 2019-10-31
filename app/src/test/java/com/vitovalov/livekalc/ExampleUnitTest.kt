@@ -1,4 +1,4 @@
-package com.example.livekalc
+package com.vitovalov.livekalc
 
 import org.junit.Test
 

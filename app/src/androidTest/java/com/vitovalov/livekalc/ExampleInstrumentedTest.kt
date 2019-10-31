@@ -1,4 +1,4 @@
-package com.example.livekalc
+package com.vitovalov.livekalc
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
